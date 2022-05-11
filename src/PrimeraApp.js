@@ -1,44 +1,42 @@
 import React from 'react';
+import prototype  from 'prop-types';
 
 
 //FC
-const PrimeraApp = () => {
-
-    const saludo = 123;
+const PrimeraApp = ( {result, subtitulo} ) => {
 
 
 
     return (
         <>
             <h1>Calculadora </h1>
-            <p>Mi primera Caluladora en React</p>
-            <p>{ saludo }</p>
+            <p>{subtitulo}</p>
 
             <div>
 
-                <div class="result"> 0 </div>
+                <div className="result"> {result} </div>
 
 
-                <div class="operaciones">
+                <div className="operaciones">
                     {/* Numeros */}
-                    <div class="btn"> 1 </div>
-                    <div class="btn"> 2 </div>
-                    <div class="btn"> 3 </div>
-                    <div class="btn"> 4 </div>
-                    <div class="btn"> 5 </div>
-                    <div class="btn"> 6 </div>
-                    <div class="btn"> 7 </div>
-                    <div class="btn"> 8 </div>
-                    <div class="btn"> 9 </div>
+                    <div className="btn"> 1 </div>
+                    <div className="btn"> 2 </div>
+                    <div className="btn"> 3 </div>
+                    <div className="btn"> 4 </div>
+                    <div className="btn"> 5 </div>
+                    <div className="btn"> 6 </div>
+                    <div className="btn"> 7 </div>
+                    <div className="btn"> 8 </div>
+                    <div className="btn"> 9 </div>
 
                     {/* Botones */}
-                    <div class="btn" > C </div>
-                    <div class="btn" > + </div>
-                    <div class="btn" > - </div>
-                    <div class="btn" > * </div>
-                    <div class="btn" > / </div>
+                    <div className="btn" > C </div>
+                    <div className="btn" > + </div>
+                    <div className="btn" > - </div>
+                    <div className="btn" > * </div>
+                    <div className="btn" > / </div>
                     
-                    <div class="btn" > = </div>
+                    <div className="btn" > = </div>
 
                 </div>
             </div>
@@ -46,8 +44,17 @@ const PrimeraApp = () => {
 
         </>
      
-    )
+    );
 
 }
+
+PrimeraApp.prototype = {
+    result: prototype.number.isRequired
+}
+
+PrimeraApp.defaultProps = {
+    subtitulo: 'Mi primera Caluladora en React'
+}
+
 
 export default PrimeraApp;
