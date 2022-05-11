@@ -4,4 +4,41 @@ html, body {
     font-family:'Courier New', Courier, monospace;
     font-size: 1.3rem;
     padding: 70px;
+    text-align: center;
+}
+
+
+.result{
+    margin: 2rem;
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    border-radius: 1rem;
+    text-align: center;
+    border: none;
+}
+
+.operaciones{
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn {
+    background-color: #8cbc00;
+    color: #FFF;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    border-radius: 1rem;
+    text-align: center;
+    border: none;
+
+}
+.btn:hover {
+    background-color: #769c02;
+    cursor: pointer;
 }
