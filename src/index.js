@@ -8,5 +8,5 @@ import './index.css'
 const container = document.getElementById('app');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
 
-root.render( <PrimeraApp result={ 0 } />  );
+root.render( <PrimeraApp value={ 0 } />  );
 

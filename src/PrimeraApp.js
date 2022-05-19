@@ -1,12 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import prototype  from 'prop-types';
 
 
 //FC
-const PrimeraApp = ( {result, subtitulo} ) => {
+const PrimeraApp = ( { value = 0, subtitulo} ) => {
+    
+    const [ counter, setCounter ] = useState(0); // Retorna un []
 
 
-
+    // handleAdd
+    const handleAdd = () => {
+        setCounter( counter + 1 )
+        // setCounter( (c) => c + 1);
+    }
+    
+    // handleReset
+    const handleReset = () => {
+        setCounter( value )
+        // setCounter( (c) => c + 1);
+    }
+    // handleRest
+    const handleRest = () => {
+        setCounter( counter - 1 )
+        // setCounter( (c) => c + 1);
+    }
     return (
         <>
             <h1>Calculadora </h1>
@@ -14,7 +31,12 @@ const PrimeraApp = ( {result, subtitulo} ) => {
 
             <div>
 
-                <div className="result"> {result} </div>
+                <div className="result"> {counter} </div>
+
+                <button onClick={ handleAdd }> +1 </button>
+                <button onClick={ handleReset }> Reset </button>
+                <button onClick={ handleRest }> -1 </button>
+
 
 
                 <div className="operaciones">
