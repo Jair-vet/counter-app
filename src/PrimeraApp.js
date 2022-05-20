@@ -15,15 +15,11 @@ const PrimeraApp = ( { value = 0, subtitulo} ) => {
     }
     
     // handleReset
-    const handleReset = () => {
-        setCounter( value )
-        // setCounter( (c) => c + 1);
-    }
+    const handleReset = () => setCounter( value )
+
     // handleRest
-    const handleRest = () => {
-        setCounter( counter - 1 )
-        // setCounter( (c) => c + 1);
-    }
+    const handleSubstract = () =>  setCounter( counter - 1 )
+       
     return (
         <>
             <h1>Calculadora </h1>
@@ -35,7 +31,7 @@ const PrimeraApp = ( { value = 0, subtitulo} ) => {
 
                 <button onClick={ handleAdd }> +1 </button>
                 <button onClick={ handleReset }> Reset </button>
-                <button onClick={ handleRest }> -1 </button>
+                <button onClick={ handleSubstract }> -1 </button>
 
 
 
